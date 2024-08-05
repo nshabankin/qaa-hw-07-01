@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ./data:/var/lib/postgres
+    environment:
+      - POSTGRES_RANDOM_ROOT_PASSWORD=yes
+      - POSTGRES_DATABASE=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=7mRWsvXDs6k89Qf
+    ports:
+      - '5432:5432'
